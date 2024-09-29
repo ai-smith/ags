@@ -161,7 +161,7 @@ class FibonacciHeap:
             self._add_node(self._min_node, node)
             node.mark = False
             self._cascading(parent)
-        if node.key < self._min_node:
+        if node.key < self._min_node.key:
             self._min_node = node
 
     def delete(self, node):
